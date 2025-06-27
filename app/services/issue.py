@@ -62,10 +62,6 @@ def get_sub_issues_by_issue(db: Session, issue_id: int, skip: int, limit: int):
     return db.query(models.SubIssue).filter(models.SubIssue.issue_id == issue_id).offset(skip).limit(limit).all()
 
 
-def get_all_sub_issues(db: Session, skip: int, limit: int):
-    return db.query(models.SubIssue).offset(skip).limit(limit).all()
-
-
 def update_sub_issue(db: Session, sub_issue_id: int, sub_issue_update: schemas.SubIssueCreate):
     sub_issue = get_sub_issue(db, sub_issue_id=sub_issue_id)
     if not sub_issue:
