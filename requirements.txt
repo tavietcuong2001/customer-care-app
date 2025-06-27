@@ -1,0 +1,10 @@
+uvicorn[standard]
+fastapi
+pydantic
+pydantic_settings
+ipykernel
+sqlalchemy
+pyodbc
+google-genai
+mcp
+alembic
